@@ -1,6 +1,10 @@
 package services
 
+import (
+	"context"
+	"smc-wallet-be/src/module/user/dto"
+)
+
 type IUserService interface {
-	CreateUser()
-	GetUser()
+	GetUserById(context.Context, int) (dto.UserDto, error)
 }

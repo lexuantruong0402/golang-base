@@ -8,8 +8,8 @@ import (
 	"gorm.io/gorm"
 )
 
-func Init() *gorm.DB {
-	dbURL := "postgres://pg:pass@localhost:5432/crud"
+func ConnectToDB() *gorm.DB {
+	dbURL := "postgres://root:secret@localhost:5432/golang"
 
 	db, err := gorm.Open(postgres.Open(dbURL), &gorm.Config{})
 
