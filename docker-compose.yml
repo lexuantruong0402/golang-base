@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  smc-wallet-db:
+    container_name: smc-wallet-db
+    image: postgres:latest
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - PGDATA=/pgdata
+      - POSTGRES_DB=golang
