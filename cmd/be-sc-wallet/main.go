@@ -7,9 +7,9 @@ import (
 	"os"
 	"strconv"
 
-	db "smc-wallet-be/src/database"
-	grpc_handler "smc-wallet-be/src/module/user/grpc"
-	"smc-wallet-be/src/proto/pb"
+	db "smc-wallet-be/internal/database"
+	grpc_handler "smc-wallet-be/internal/module/user/grpc"
+	"smc-wallet-be/proto/pb"
 
 	"github.com/joho/godotenv"
 

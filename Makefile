@@ -22,7 +22,7 @@ swagger:
 	cd cmd/internal-blockchain-api; swag init; cd ../..
 
 genpb:
-	protoc --proto_path=src/proto --go-grpc_opt=require_unimplemented_servers=false --go-grpc_out=src/proto/pb --go_out=src/proto/pb src/proto/*.proto
+	protoc --proto_path=proto --go-grpc_opt=require_unimplemented_servers=false --go-grpc_out=proto/pb --go_out=proto/pb proto/*.proto
 
 genpb-old:
 	protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:proto/pb

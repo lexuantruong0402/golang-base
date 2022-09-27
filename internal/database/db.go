@@ -2,7 +2,7 @@ package db
 
 import (
 	"log"
-	user "smc-wallet-be/src/module/user/entity"
+	"smc-wallet-be/internal/module/user/entities"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -17,7 +17,7 @@ func ConnectToDB() *gorm.DB {
 		log.Fatalln(err)
 	}
 
-	db.AutoMigrate(&user.User{})
+	db.AutoMigrate(&entities.User{})
 
 	return db
 }

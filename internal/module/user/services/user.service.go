@@ -2,8 +2,8 @@ package services
 
 import (
 	"context"
-	"smc-wallet-be/src/module/user/dto"
-	"smc-wallet-be/src/module/user/repository"
+	"smc-wallet-be/internal/module/user/dto"
+	"smc-wallet-be/internal/module/user/repository"
 
 	"gorm.io/gorm"
 )

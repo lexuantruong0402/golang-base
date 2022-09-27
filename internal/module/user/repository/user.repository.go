@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"smc-wallet-be/src/module/user/dto"
-	entities "smc-wallet-be/src/module/user/entity"
+	"smc-wallet-be/internal/module/user/dto"
+	"smc-wallet-be/internal/module/user/entities"
 
 	"gorm.io/gorm"
 )

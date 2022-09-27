@@ -2,18 +2,18 @@ package grpc_handler
 
 import (
 	"context"
-	"smc-wallet-be/src/module/user/services"
-	"smc-wallet-be/src/proto/pb"
+	"smc-wallet-be/internal/module/user/services"
+	"smc-wallet-be/proto/pb"
 
 	"gorm.io/gorm"
 )
 
 type UserGRPCServer struct {
-	UserService services.UserService
+	UserService *services.UserService
 }
 
 func NewUserGRPCServer(dbConnection *gorm.DB) *UserGRPCServer {
-	return &UserGRPCServer{UserService: *services.NewUserService(dbConnection)}
+	return &UserGRPCServer{UserService: services.NewUserService(dbConnection)}
 }
 
 func (s *UserGRPCServer) GetUserById(ctx context.Context, req *pb.UserId) (*pb.User, error) {
